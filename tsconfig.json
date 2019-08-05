@@ -25,6 +25,9 @@
       "pipes/*": [
         "./src/app/modules/shared/pipes/*"
       ],
+      "shared/*": [
+        "./src/app/modules/shared/*"
+      ],
       "~/*": [
         "src/*"
       ],

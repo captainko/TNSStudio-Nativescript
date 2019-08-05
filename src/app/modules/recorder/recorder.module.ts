@@ -1,6 +1,6 @@
 // nativescript
 import { NativeScriptRouterModule } from "nativescript-angular/router";
-
+import { NativeScriptCommonModule } from "nativescript-angular/common";
 // angular
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { Routes } from "@angular/router";
@@ -21,6 +21,7 @@ const routes: Routes = [
 @NgModule({
     imports: [
         SharedModule,
+        NativeScriptCommonModule,
         NativeScriptRouterModule.forChild(routes),
     ],
     declarations: [...COMPONENTS],

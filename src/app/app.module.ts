@@ -1,5 +1,4 @@
 // nativescript
-import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 //angular
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
@@ -8,6 +7,7 @@ import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { CoreModule } from "./modules/core/core.module";
+import { PlayerModule } from "./modules/player/player.module";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -22,6 +22,7 @@ import { CoreModule } from "./modules/core/core.module";
     imports: [
         CoreModule,
         AppRoutingModule,
+        PlayerModule,
     ],
     declarations: [
         AppComponent,

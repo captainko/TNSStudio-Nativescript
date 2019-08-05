@@ -5,6 +5,7 @@ import { NativeScriptHttpModule } from "nativescript-angular/http";
 import { NgModule, Optional, SkipSelf } from "@angular/core";
 
 // app
+import { PIPES } from "../shared/pipes";
 import { PROVIDERS } from "./services";
 
 const MODULES: any[] = [

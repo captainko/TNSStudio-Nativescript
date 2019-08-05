@@ -1,4 +1,5 @@
 export interface ITrack {
+  id?: number;
   filepath?: string;
   name?: string;
   order?: number;
