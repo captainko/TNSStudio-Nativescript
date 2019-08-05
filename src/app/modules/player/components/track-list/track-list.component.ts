@@ -1,5 +1,5 @@
 // angular
-import { Component, Input } from "@angular/core";
+import { Component } from "@angular/core";
 // app
 import { LogService, AuthService, DialogService } from "~/app/modules/core/services";
 import { ITrack } from "models/track.model";

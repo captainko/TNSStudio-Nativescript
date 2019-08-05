@@ -1,5 +1,5 @@
 // angular
-import { Component, Input } from "@angular/core";
+import { Component } from "@angular/core";
 import { LogService } from "~/app/modules/core/services";
 import { PlayerService } from "../../services";
 

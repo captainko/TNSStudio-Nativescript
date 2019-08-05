@@ -13,14 +13,17 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "guards/*": [
+        "./src/app/guards/*"
+      ],
       "models/*": [
         "./src/app/modules/core/models/*"
       ],
-      "service/*": [
+      "services/*": [
         "./src/app/modules/core/services/*"
       ],
       "pipes/*": [
-        "src/app/modules/shared/pipes/*"
+        "./src/app/modules/shared/pipes/*"
       ],
       "~/*": [
         "src/*"

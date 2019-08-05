@@ -1,35 +1,38 @@
+import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { NativeScriptHttpModule } from "nativescript-angular/http";
 // angular
 import { NgModule, Optional, SkipSelf } from "@angular/core";
 
 // app
-import { PIPES } from "../shared/pipes";
 import { PROVIDERS } from "./services";
+
+const MODULES: any[] = [
+    NativeScriptModule,
+    NativeScriptFormsModule,
+    NativeScriptHttpModule,
+];
+
 
 @NgModule({
     imports: [
-        NativeScriptFormsModule,
-        NativeScriptHttpModule,
-    ],
-    declarations: [
-        ...PIPES
+        ...MODULES,
     ],
     providers: [
         ...PROVIDERS,
     ],
     exports: [
-        ...PIPES,
+        ...MODULES,
     ]
 })
 export class CoreModule {
     constructor(
         @Optional() @SkipSelf() parentModule: CoreModule) {
-            if(parentModule) {
-                throw new Error(
-                    'CoreModule is already loaded.',
-                )
-            }
-         }
+        if (parentModule) {
+            throw new Error(
+                'CoreModule is already loaded.',
+            )
+        }
+    }
 
 }

@@ -7,7 +7,6 @@ import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 //app
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { PROVIDERS } from "./modules/core/services";
 import { CoreModule } from "./modules/core/core.module";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -23,7 +22,6 @@ import { CoreModule } from "./modules/core/core.module";
     imports: [
         CoreModule,
         AppRoutingModule,
-        NativeScriptModule,
     ],
     declarations: [
         AppComponent,

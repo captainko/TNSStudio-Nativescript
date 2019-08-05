@@ -4,6 +4,12 @@ import { BaseComponent } from './components/base.component';
 import { Routes } from '@angular/router';
 import { NativeScriptRouterModule } from 'nativescript-angular/router';
 import { PlayerModule } from '../player/player.module';
+import { SharedModule } from '../shared/shared.module';
+
+const COMPONENTS: any[] = [
+    BaseComponent,
+    MixerComponent
+];
 
 const routes: Routes = [
     {
@@ -13,15 +19,13 @@ const routes: Routes = [
             { path: 'home', component: MixerComponent }
         ]
     }
-]
+];
 
 @NgModule({
-    declarations: [
-        MixerComponent,
-        BaseComponent
-    ],
+    declarations: [...COMPONENTS],
     imports: [
         PlayerModule,
+        SharedModule,
         NativeScriptRouterModule.forChild(routes),
     ],
     schemas: [NO_ERRORS_SCHEMA],

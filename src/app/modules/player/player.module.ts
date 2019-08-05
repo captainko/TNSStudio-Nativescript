@@ -3,22 +3,15 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 // app
 import { PROVIDERS } from "./services";
-import { CoreModule } from "../core/core.module";
-import { PlayerControlsComponent } from "./components/player-controls/player-controls.component";
-import { TrackListComponent } from "./components/track-list/track-list.component";
+import { COMPONENTS } from './components';
+import { SharedModule } from "../shared/shared.module";
 
 
 @NgModule({
-    imports: [CoreModule],
-    schemas: [NO_ERRORS_SCHEMA],
+    imports: [SharedModule],
     providers: [...PROVIDERS],
-    declarations: [
-        PlayerControlsComponent,
-        TrackListComponent
-    ],
-    exports: [
-        PlayerControlsComponent,
-        TrackListComponent
-    ],
+    declarations: [...COMPONENTS],
+    exports: [...COMPONENTS],
+    schemas: [NO_ERRORS_SCHEMA],
 })
 export class PlayerModule { }

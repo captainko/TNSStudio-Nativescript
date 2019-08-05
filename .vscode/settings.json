@@ -1,6 +1,18 @@
 {
-  "cSpell.words": [
-    "filepath",
-    "ngtools"
-  ]
+   "cSpell.words": [
+      "filepath",
+      "ngtools"
+   ],
+   "editor.tabSize": 3,
+   "editor.insertSpaces": true,
+   "editor.detectIndentation": false,
+   "xml.fileAssociations": [
+      {
+         "systemId": "c:\\Users\\deoye\\Documents\\Angular\\ourproduc\\navtive\\TNSStudio\\schema\\tns.xsd",
+         "pattern": "**/**/*.xml"
+      }
+   ],
+   "files.exclude": {
+      "schema": true
+   }
 }
