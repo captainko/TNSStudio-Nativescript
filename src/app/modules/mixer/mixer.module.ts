@@ -5,14 +5,16 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { Routes } from '@angular/router';
 
 // app
+import { SharedModule } from '../shared/shared.module';
+import { PlayerModule } from '../player/player.module';
 import { MixerComponent } from './components/mixer.component';
 import { BaseComponent } from './components/base.component';
 import { MixListComponent } from './components/mix-list.component';
-import { PlayerModule } from '../player/player.module';
-import { SharedModule } from '../shared/shared.module';
+import { ActionBarComponent } from './components/action-bar/action-bar.component';
 import { PROVIDERS } from './services';
 
 const COMPONENTS: any[] = [
+    ActionBarComponent,
     BaseComponent,
     MixerComponent,
     MixListComponent,

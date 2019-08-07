@@ -1,2 +1,3 @@
-export * from '../../core/models/composition.model';
-export * from '../../core/models/track.model';
+export * from './composition.model';
+export * from './track-player.model';
+export * from './track.model';

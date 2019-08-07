@@ -16,7 +16,7 @@ export class MixerService {
     }
 
     public add() {
-        this.dialogService.prompt('Composition name: ')
+        this.dialogService.prompt('Composition name: ', ' ')
             .then((value) => {
                 if (value.result) {
                     let composition = new CompositionModel({

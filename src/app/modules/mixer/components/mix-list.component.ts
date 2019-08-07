@@ -13,7 +13,7 @@ export class MixListComponent {
 
     constructor(
         private router: RouterExtensions,
-        private mixerService: MixerService,
+        public mixerService: MixerService,
     ) {
 
     }
