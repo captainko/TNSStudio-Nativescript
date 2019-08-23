@@ -15,5 +15,7 @@
    ],
    "files.exclude": {
       "schema": true
-   }
+   },
+   "editor.snippetSuggestions": "none",
+   "NativescriptExtend.enable.snippets": false
 }

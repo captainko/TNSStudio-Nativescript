@@ -23,10 +23,8 @@ export class PlayerService {
             .pipe(
                 map(_ => this._longestTrack ? this._longestTrack.player.currentTime : 0)
             );
-        this.tracks = [
-            { name: "Guitars", solo: true },
-            { name: "Vocals", solo: false },
-        ];
+
+        // this.tracks = th
     }
 
     public set playing(value: boolean) {
@@ -49,6 +47,7 @@ export class PlayerService {
 
     private _initTrackPlayers() {
         let initTrackPlayer = (track: ITrack) => {
+            if(!track) return;
             let trackPlayer = new TrackPlayerModel();
             trackPlayer.load(track).then(_ => {
                 this._trackPlayers.push(trackPlayer);
@@ -86,6 +85,7 @@ export class PlayerService {
 
     public play(): void {
         for (let t of this._trackPlayers) {
+
             t.player.play();
         }
     }
@@ -125,34 +125,5 @@ export class PlayerService {
         return index;
     }
 
-    private _demoComposition(): IComposition[] {
-        return [
-            {
-                id: 1,
-                name: "Demo",
-                created: Date.now(),
-                order: 0,
-                tracks: [
-                    {
-                        id: 1,
-                        name: 'Drums',
-                        order: 0,
-                        filepath: '~/audio/drums.mp3'
-                    },
-                    {
-                        id: 2,
-                        name: 'Bass',
-                        order: 1,
-                        filepath: '~/audio/bass.mp3'
-                    },
-                    {
-                        id: 3,
-                        name: 'Piano',
-                        order: 2,
-                        filepath: '~/audio/piano.mp3'
-                    }
-                ] // tracks
-            }
-        ]
-    }
+
 }

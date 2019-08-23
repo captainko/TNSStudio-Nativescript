@@ -2,7 +2,7 @@
 import { Injectable } from "@angular/core";
 
 // app
-import { ITrack, IComposition, CompositionModel, } from "shared/models";
+import { ITrack, IComposition, CompositionModel, TrackPlayerModel, } from "shared/models";
 import { DialogService, DatabaseService } from "services/index";
 
 @Injectable()
@@ -13,6 +13,7 @@ export class MixerService {
         private dialogService: DialogService,
     ) {
         this.list = this._savedCompositions() || this._demoComposition();
+        // this.list = this._demoComposition();
     }
 
     public add() {
@@ -64,21 +65,29 @@ export class MixerService {
         return [
             {
                 id: 1,
-                name: 'Demo',
+                name: "Demo",
                 created: Date.now(),
                 order: 0,
                 tracks: [
                     {
                         id: 1,
-                        name: 'Guitar',
-                        order: 0
+                        name: 'Drums',
+                        order: 0,
+                        filepath: '~/audio/drums.mp3'
                     },
                     {
                         id: 2,
-                        name: 'Vocals',
-                        order: 1
-                    }
-                ]
+                        name: 'Bass',
+                        order: 1,
+                        filepath: '~/audio/bass.mp3'
+                    },
+                    {
+                        id: 3,
+                        name: 'Piano',
+                        order: 2,
+                        filepath: '~/audio/piano.mp3'
+                    },
+                ] // tracks
             }
         ]
     }

@@ -35,6 +35,7 @@ export class PlayerControlsComponent implements OnInit, OnDestroy {
     ) { }
 
     ngOnInit() {
+        this.playerService.composition = this.composition;
         this.playerService.playing$
             .pipe(takeUntil(this._destroy$))
             .subscribe((playing: boolean) => {
@@ -44,8 +45,9 @@ export class PlayerControlsComponent implements OnInit, OnDestroy {
                     this._subCurrentTime = this.playerService.currentTime$
                         .pipe(takeUntil(this._destroy$))
                         .subscribe((currTime: number) => {
+                            console.log(currTime);
                             this.currentTime = currTime;
-                        });
+  });
 
                 } else if (this._subCurrentTime) {
                     this._subCurrentTime.unsubscribe();
@@ -65,6 +67,7 @@ export class PlayerControlsComponent implements OnInit, OnDestroy {
     }
 
     public togglePlay() {
+        this.logService.debug('clicked');
         this.playerService.togglePlay();
     }
 
